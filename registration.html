@@ -1,0 +1,73 @@
+<html>
+  <form action="regi.php" method="POST">
+    <fieldset >
+      <legend ><b></b>REGISTRATION</b></legend>
+      <form>
+        <br />
+        <table width="100%" cellpadding="0" cellspacing="0">
+          <tr>
+            <td>Id</td>
+            <td>:</td>
+            <td><input name="id" type="text" /></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td colspan="4"><hr /></td>
+          </tr>
+          <tr>
+            <td>Password</td>
+            <td>:</td>
+            <td><input name="password" type="password" /></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td colspan="4"><hr /></td>
+          </tr>
+          <tr>
+            <td>Confirm Password</td>
+            <td>:</td>
+            <td><input name="confirmPassword" type="password" /></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td colspan="4"><hr /></td>
+          </tr>  
+          <tr>
+            <td>Name</td>
+            <td>:</td>
+            <td><input name="name" type="text" /></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td colspan="4"><hr /></td>
+          </tr>        
+          <tr>
+            <td>Email</td>
+            <td>:</td>
+            <td>
+              <input name="email" type="text" />
+              <abbr title="hint: sample@example.com"><b>i</b></abbr>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td colspan="4"><hr /></td>
+          </tr>
+          <tr>
+            <td>User Type [User / Admin]</td>
+            <td>:</td>
+            <td>
+              <select name="userType" id="">
+                <option value="User">User</option>
+                <option value="Admin">Admin</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+        <hr />
+        <input name="submit" type="submit" value="Submit" />
+        <a href="login.html">Login</a>
+      </form>
+    </fieldset>
+  </form>
+</html>
