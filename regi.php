@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 if (isset($_POST['submit'])) {
     $id               = $_POST['id'];
@@ -14,24 +13,13 @@ if (isset($_POST['submit'])) {
     } else {
         $con = mysqli_connect('localhost', 'root', '', 'webtech');
 
-        $sql = "INSERT INTO user (id,name,email,password,userType) VALUES($id,$name,$email,$password,$userType)";
-
-
-        // $_SESSION['id']         = $id;
-        // $_SESSION['name']       = $name;
-        // $_SESSION['email']      = $email;
-        // $_SESSION['password']   = $password;
-        // $_SESSION['userType']   = $userType;
-
-        // $file = fopen('data.txt', 'a');
-        // $data = $id . "|" . $name . "|" . $password . "|" . $email . "|" . $userType . "\r\n";
-        // fwrite($file, $data);
-        // fclose($file);
-
-        header('location: login.html');
+        $sql = "INSERT INTO user (id,name,email,password,userType)
+        VALUES($id,$name,$email,$password,$userType)";
+        $result = mysqli_query($con, $sql);
+        if ($result) {
+            header('location: login.html');
+        }
     }
 } else {
-    header('location: login.html');
+    echo "error!";
 }
-
-mysqli_close($connection);
