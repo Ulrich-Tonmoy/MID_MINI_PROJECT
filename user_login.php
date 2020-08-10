@@ -1,12 +1,5 @@
 <?php
 session_start();
-$file  = fopen('data.txt', 'r');
-$data  = fread($file, filesize('data.txt'));
-fclose($data);
-
-$user = explode('|', $data);
-
-$name       = trim($user[1]);
 
 ?>
 
@@ -14,7 +7,7 @@ $name       = trim($user[1]);
 <table border="1" style="width: 100%; border: 1px solid;">
     <tr>
         <td>
-            <h1>Welcome <?php echo $name   ?>!</h1>
+            <h1>Welcome <?php echo $_SESSION["name"]   ?>!</h1>
         </td>
     </tr>
     <tr>
