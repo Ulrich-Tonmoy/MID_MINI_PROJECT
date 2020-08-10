@@ -14,7 +14,7 @@ if (isset($_POST['submit'])) {
         $con = mysqli_connect('localhost', 'root', '', 'webtech');
 
         $sql = "INSERT INTO user (id,name,email,password,userType)
-        VALUES($id,$name,$email,$password,$userType)";
+        VALUES('$id','$name','$email','$password','$userType')";
         $result = mysqli_query($con, $sql);
         if ($result) {
             header('location: login.html');
